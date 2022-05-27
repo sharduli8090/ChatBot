@@ -4,15 +4,24 @@ body{
     color: aliceblue;
 }
 
-#introText{
-    font-family: 'Poppins', sans-serif;
-}
-
+/* For the header elements */
 #headText{
     display: flex;
     justify-content: space-between;
 }
 
+/* For the intro text in header */
+#introText{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* For the flex of of status */
+#statusFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* For the status symbol */
 #statusSymbol{
     height: 10px;
     width: 10px;
@@ -22,17 +31,13 @@ body{
     margin: 3px;
 }
 
+/* For the flex of main box */
 #mainBoxflex{
     display: flex;
     justify-content: center;
-    /* margin: 0px; */
 }
 
-#statusFlex{
-    display: flex;
-    justify-content: space-between;
-}
-
+/* For the main box */
 #mainBox{
     display: flex;
     flex-direction: column;
@@ -45,6 +50,7 @@ body{
     border-radius: 50px;
 }
 
+/* For the chat box which displays message cards */
 #chatBox{
     border-top-left-radius:10px;
     border-top-right-radius:10px ;
@@ -56,14 +62,15 @@ body{
     padding: 0px;
 }
 
+/* For the flex of of input elements */
 #inputFlex{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* for the input box */
 #inputBox{
-    /* margin:0% 1% ; */
     width: 190px;
     height: 30px;    
     background: rgb(195,195,195);
@@ -74,6 +81,7 @@ body{
     padding-left: 5%;
 }
 
+/* When input box is in focus */
 #inputBox:focus{
     outline:0px;
     border: 1px solid white;
@@ -81,11 +89,13 @@ body{
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
+/* For the icon in send button */
 #sendIcon{
     font-size:17px;
     color:white;
 }
 
+/* For the send button */
 #sendBtn{
     height: 40px;
     background-color: rgb(190, 185, 185);
@@ -94,13 +104,12 @@ body{
     border: 0px;
 }
 
+/* When send button is in hover */
 #sendBtn:hover{
     background-color: rgb(123, 119, 119);
     color: white;
     cursor:  pointer;
 }
-
-
 
 /* For the display images */
 img{
@@ -110,7 +119,6 @@ img{
     border: 1px solid white;
     margin-right: 0px;
 }
-
 
 /* Setting Image margin for bot */
 #imgLeft{
@@ -124,8 +132,6 @@ img{
 
 /* For all the message cards*/
 .cards{
-    /* display: flex; */
-    /* flex-direction: row; */
     margin:1% 0%;
     margin-bottom: 1%;
     height: auto;
@@ -158,13 +164,12 @@ img{
     background: linear-gradient(98deg, rgba(0,192,207,1) 22%, rgba(0,140,218,1) 79%);
 }
 
+/* For the flex of cards */
 #cardFlex{
     display: flex;
     justify-content: end;
     align-items: center;
 }
-
-
 
 /* For typing text */
 #typing{
@@ -175,10 +180,12 @@ img{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* For the footer hyperlinks */
 a{
     text-decoration: none;
 }
 
+/* for the flex of footer */
 #footerFlex{
     display: flex;
     flex-direction: column;
@@ -187,11 +194,12 @@ a{
     font-size: 30px;
 }
 
+/* for the footer icons */
 .icon{
     color: white;
 }
 
-
+/* RESPONSIVENESS */
 
 /* By default it is made for mobile devices */
 
@@ -248,11 +256,9 @@ a{
         font-size: 20px;
     }
 
-    
-#footerFlex{
-    font-size: 45px;
-}
-
+    #footerFlex{
+        font-size: 45px;
+    }
 
 }
 
@@ -309,10 +315,10 @@ a{
         font-size: 25px;
     }
         
-#footerFlex{
-    padding-top: 150px;
-    font-size:70px;
-}
+    #footerFlex{
+        padding-top: 150px;
+        font-size:70px;
+    }
 }
 
 /* Desktops, large screens */

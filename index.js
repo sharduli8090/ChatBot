@@ -1,6 +1,4 @@
-
-
-// To Get All the Books
+// API call To Get All the Books
 function getBooks(){
 
     const data = null;
@@ -27,7 +25,7 @@ function getBooks(){
 
 }
 
-// To Get a particular chapter of any Book
+// API call to Get a particular chapter of any Book
 function getChapter(bookName, chapterNo){
 
     const data = null;
@@ -67,7 +65,7 @@ function getChapter(bookName, chapterNo){
     
 }
 
-// To get verses from any book any chapter
+// API call to get verses from any book any chapter
 function getVerses(bookName,chapterNo,verseFrom,verseTo){
 
     const data = null;
@@ -109,7 +107,7 @@ function getVerses(bookName,chapterNo,verseFrom,verseTo){
 
 }
 
-// To get a particular verse from any Chapter of any book
+//  API call to get a particular verse from any Chapter of any book
 function getVerseofChapter(bookName,chapterNo,verse){
 
     const data = null;
@@ -149,13 +147,12 @@ function getVerseofChapter(bookName,chapterNo,verse){
 
 }
 
-
-
-
+// For the dynamic display of Header
 
 // Setting Interval For Head Text For Introduction Function
 var timemain = setInterval(intro,2000)
 
+// Intro Text Function
 function intro(){
 
     document.getElementById("introText").innerHTML = '<span style="color:yellow;">I</span>';
@@ -166,21 +163,24 @@ function intro(){
 
 }
 
-
+// am text Function
 function two(){
     document.getElementById("introText").innerHTML += '<span style="color:rgb(255, 0, 174);"> am</span>';
 }
 
+// a text Function
 function three(){
     document.getElementById("introText").innerHTML += '<span style="color:rgb(0, 128, 255);"> a</span>';
 }
 
+// ChatBot text Function
 function four(){
     document.getElementById("introText").innerHTML += '<span style="color:white;"> Chat Bot !!</span>';
 }
 
 
-//For the Online Symbol 
+//For the Status
+
 // To Display the Green Symbol
 function displaySymbol(){
     document.getElementById('statusSymbol').style.display = 'block';
@@ -204,7 +204,7 @@ var flag = 1;
 var prevMsg = "Hi there ! My name is BotSter. <br> We can have a fun talk, or You can ask me about Holy Book Bible<br>1. Ask me the names of all the Holy Bible books.<br>2. Get the verse of any chapter from any of the Holy bible Book.<br>3. I can show you any chapter of any of the Holy Bible book.<br>4. Get the list of verses from any chapter of any of the Holy bible Book. ";
 
 
-// Calling the initial loading function
+// Calling the initial loading function when the page is loaded
 onloading();
 
 // Initial Function when Website loads
@@ -212,6 +212,7 @@ function onloading(){
 
     var tempMsgBoxIn = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left">'+prevMsg+'</div>';
     document.getElementById('chatBox').innerHTML = tempMsgBoxIn;
+    autoScroller();
 
 }
 
@@ -270,7 +271,6 @@ function autoScroller(){
 }
 
 
-
 // Default message to display
 function defaultMsgDisplay(){
 
@@ -282,7 +282,7 @@ function defaultMsgDisplay(){
 
 
 
-// Function to set the reply
+// Function to get the reply
 function getReply(text){
 
     // Initial questions if flag is set to 1
@@ -346,8 +346,8 @@ function getReply(text){
 
         }
         
-        // If user says praises
-        else if(text.includes('you are nice') || text.includes('good') || text.includes('nice') || text.includes('awesome')){
+        // If user praises
+        else if(text.includes('good') || text.includes('nice') || text.includes('awesome')){
 
             var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Thankyou! it means a lot!</div>';
             document.getElementById('chatBox').innerHTML += rep;
@@ -377,7 +377,14 @@ function getReply(text){
 
         }
 
-        // If user types un understandable message
+        else if(text.includes('thank')){
+
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Welcome! Happy to help!</div>';
+            document.getElementById('chatBox').innerHTML += rep;
+
+        }
+
+        // If user types not understandable message
         else{
 
             var errReply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left" >Did not get you! Ask Again ...</div>';
@@ -487,28 +494,31 @@ function removal(){
 }
 
 
-
 // Function is called when send button is clicked
 function adder(){
-    // alert("in adder");
-    // Showing typing for some time after user sends a message
-    
-    var val = document.getElementById('inputBox').value;
-    if(val!=""){
-    // alert(val);
-    
-    document.getElementById('typing').innerHTML = 'Typing...';
-   
 
+    // Taking the value from input box
+    var val = document.getElementById('inputBox').value;
+
+    // If value is not empty
+    if(val!=""){
+    
+        // Showing typing for some time after user sends a message
+        document.getElementById('typing').innerHTML = 'Typing...';
+   
+        // displaying the message sent by user
         var tsg = '<div id="card1" class="cards cardright"><div id="cardFlex">'+val+'<img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" id="imgRight" align="right"></div></div>';
 
         document.getElementById('chatBox').innerHTML += tsg;
+
         autoScroller();
 
+        // calling the getreply function
         val = val.toLowerCase();
         var call = setTimeout(getReply,2500,val);
         var rem = setTimeout(removal,2000);
         
+        // emptying the input box after sending the messages
         document.getElementById('inputBox').value = "";
         var sc = setTimeout(autoScroller,2700);
 

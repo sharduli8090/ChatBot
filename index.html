@@ -1,89 +1,119 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <head>
+
         <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Link to CSS file -->
-    <link href="index.css" rel="stylesheet">
+        <!-- Link to CSS file -->
+        <link href="index.css" rel="stylesheet">
 
-    <!-- Link for the icon in title bar -->
-    <link rel="icon" href="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" type="image/x-icon">
+        <!-- Link for the icon in title bar -->
+        <link rel="icon" href="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" type="image/x-icon">
 
-    <!-- Links to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <!-- Links to Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-    <!-- Link for the icons of font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Link for the icons of font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Title of the page -->
-    <title>Chat Bot</title>
+        <!-- Title of the page -->
+        <title>Chat Bot</title>
 
     </head>
 
     <body>
-<div id="headText">
-        <div id="introText"><span style="color:yellow;">I</span></div>
-        <div id="statusFlex">
-        <div id="statusSymbol"></div>
-        <div id="status">Online</div>
+
+        <!-- For the header -->
+        <div id="headText">
+
+            <!-- Intro Text in Header -->
+            <div id="introText">
+                <span style="color:yellow;">I</span>
+            </div>
+
+            <!-- Status text in Header -->
+            <div id="statusFlex">
+
+                <!-- For the status symbol -->
+                <div id="statusSymbol"></div>
+
+                <!-- For the online text -->
+                <div id="status">Online</div>
+
+            </div>
         </div>
-</div>
 
+        <!-- For flex of main box -->
+        <div id="mainBoxflex">
 
-<div id="mainBoxflex">
-<div id="mainBox">
-    <div id="chatBox"></div>
+            <!-- Main Box -->
+            <div id="mainBox">
+
+                <!-- For the Chat Box -->
+                <div id="chatBox"></div>
     
-        <!-- For the Typing Text -->
-        <div id="typing"></div>
-    <div id="inputFlex">
+                <!-- For the Typing Text -->
+                <div id="typing"></div>
 
+                <!-- For the flex of Input Elements-->
+                <div id="inputFlex">
 
-    <input type="text" id="inputBox" placeholder="Type a message....">
-    <!-- Send Button -->
-    <button id="sendBtn" onclick= 'adder()'>
+                    <!-- Input Box -->
+                    <input type="text" id="inputBox" placeholder="Type a message....">
 
-        <!-- Icon of the Send Button -->
-        <i class="fa fa-send-o" id="sendIcon" ></i>   
+                    <!-- Send Button -->
+                    <button id="sendBtn" onclick= 'adder()'>
 
-    </button>
+                        <!-- Icon of the Send Button -->
+                        <i class="fa fa-send-o" id="sendIcon" ></i>   
 
-    </div>
-</div>
+                    </button>
+
+                </div>
+            </div>
         </div>
 
+        <!-- For the Footer -->
         <div id="footerFlex">
-        <div id="footer">Powered By Creativstan</div>
-        <div id="icons">
-        <a href="https://www.instagram.com/creativstan/" target="_blank">
+
+            <!-- For the footer flex -->
+            <div id="footer">Powered By Creativstan</div>
+
+            <!-- For the Social Media Icons -->
+            <div id="icons">
+                <a href="https://www.instagram.com/creativstan/" target="_blank">
             
-            <!-- Icon -->
-            <i class="fa fa-instagram icon" ></i>
+                    <!-- Icon -->
+                    <i class="fa fa-instagram icon" ></i>
         
-        </a>
+                </a>
         
-        <!-- Pinterest -->
-        <a href="https://in.pinterest.com/creativstan" target="_blank">
+                <!-- Pinterest -->
+                <a href="https://in.pinterest.com/creativstan" target="_blank">
             
-            <!-- Icon -->
-            <i class="fa fa-pinterest icon" ></i>
+                    <!-- Icon -->
+                    <i class="fa fa-pinterest icon" ></i>
         
-        </a>
+                </a>
         
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/sharduli-pandey-85455b1a7/" target="_blank">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/sharduli-pandey-85455b1a7/" target="_blank">
             
-            <!-- Icon -->
-            <i class="fa fa-linkedin icon" ></i>
+                    <!-- Icon -->
+                    <i class="fa fa-linkedin icon" ></i>
         
-        </a>
+                </a>
+            </div>
         </div>
-        </div>
-    <script src="index.js"></script>
+
+        <!-- Connected Scripts -->
+        <script src="index.js"></script>
 
     </body>
 
