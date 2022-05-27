@@ -1,3 +1,5 @@
+
+
 // To Get All the Books
 function getBooks(){
 
@@ -11,8 +13,8 @@ function getBooks(){
 		    console.log(this.responseText);
 
             var obji = JSON.parse(this.responseText);
-            var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft" >'+obji.The_Old_Testament+'<br>'+obji.The_New_Testament+'</div>';
-            document.getElementById('msgBox').innerHTML += reply;
+            var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left">'+obji.The_Old_Testament+'<br>'+obji.The_New_Testament+'</div>';
+            document.getElementById('chatBox').innerHTML += reply;
             autoScroller();
 
         }
@@ -40,15 +42,15 @@ function getChapter(bookName, chapterNo){
             var obji = JSON.parse(this.responseText);
 
             if(obji.Output!='Wrong slection!!! Please try again.'){
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >'+obji.Output+'</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">'+obji.Output+'</div>';
+                document.getElementById('chatBox').innerHTML += reply;
 
             }
             else{
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Did not found what you were looking for!</div>';
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">Did not found what you were looking for!</div>';
                 document.getElementById('msgBox').innerHTML += reply;
-                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Try Again...</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">Try Again...</div>';
+                document.getElementById('chatBox').innerHTML += reply;
             
             }
 
@@ -80,17 +82,17 @@ function getVerses(bookName,chapterNo,verseFrom,verseTo){
         
             if(obji.Output!='Wrong slection!!! Please try again.'){
             
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >'+obji.Output+'</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">'+obji.Output+'</div>';
+                document.getElementById('chatBox').innerHTML += reply;
             
             }
             else{
 
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Did not found what you were looking for!</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left" >Did not found what you were looking for!</div>';
+                document.getElementById('chatBox').innerHTML += reply;
             
-                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Try Again...</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Try Again...</div>';
+                document.getElementById('chatBox').innerHTML += reply;
            
             }
            
@@ -122,16 +124,16 @@ function getVerseofChapter(bookName,chapterNo,verse){
        
             if(obji.Output!='Wrong slection!!! Please try again.'){
           
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >'+obji.Output+'</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">'+obji.Output+'</div>';
+                document.getElementById('chatBox').innerHTML += reply;
            
             }
             else{
-                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Did not found what you were looking for!</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                var reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">Did not found what you were looking for!</div>';
+                document.getElementById('chatBox').innerHTML += reply;
             
-                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Try Again...</div>';
-                document.getElementById('msgBox').innerHTML += reply;
+                reply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">Try Again...</div>';
+                document.getElementById('chatBox').innerHTML += reply;
             
             }
             
@@ -147,66 +149,60 @@ function getVerseofChapter(bookName,chapterNo,verse){
 
 }
 
-// For The Head Texts
 
-// For the Online Text
 
-// To Display the Green Symbol
-function display(temp){
-    document.getElementById('symb').innerHTML= temp;
-}
 
-// To Display the Online Text
-document.getElementById('texton').innerHTML = "Online";
 
-// Calling online function at intervals
-var time6 = setInterval(online,1000);
+// Setting Interval For Head Text For Introduction Function
+var timemain = setInterval(intro,2000)
 
-// Calls the display symbol fuction after a set time
-function online(){
+function intro(){
 
-    document.getElementById('symb').innerHTML="";
-    var temp = '<div id="symbol"></div>';
-    var timer = setTimeout(display, 500,temp);
+    document.getElementById("introText").innerHTML = '<span style="color:yellow;">I</span>';
+
+    var time2 = setTimeout(two,500);
+    var time3 = setTimeout(three, 1000);
+    var time4 = setTimeout(four,1500);
 
 }
 
-// Setting Interval For Head Text For welcome Function
-var timemain = setInterval(welcome,2500)
-
-function welcome(){
-
-    document.getElementById("wel").innerHTML = "";
-
-    var time1 = setTimeout(one, 500);
-    var time2 = setTimeout(two,1000);
-    var time3 = setTimeout(three, 1500);
-    var time4 = setTimeout(four,2000);
-
-}
-
-function one() {
-    document.getElementById("wel").innerHTML = '<span id="iText">I</span>';
-}
 
 function two(){
-    document.getElementById("wel").innerHTML += '<span id="amText"> am</span>';
+    document.getElementById("introText").innerHTML += '<span style="color:rgb(255, 0, 174);"> am</span>';
 }
 
 function three(){
-    document.getElementById("wel").innerHTML += '<span id="aText"> a</span>';
+    document.getElementById("introText").innerHTML += '<span style="color:rgb(0, 128, 255);"> a</span>';
 }
 
 function four(){
-    document.getElementById("wel").innerHTML += " Chat Bot !!"
+    document.getElementById("introText").innerHTML += '<span style="color:white;"> Chat Bot !!</span>';
 }
+
+
+//For the Online Symbol 
+// To Display the Green Symbol
+function displaySymbol(){
+    document.getElementById('statusSymbol').style.display = 'block';
+}
+
+var time6 = setInterval(onlineSymbolDisplay,1000);
+
+// Calls the display symbol fuction after a set time
+function onlineSymbolDisplay(){
+    document.getElementById('statusSymbol').style.display = 'none';
+    var timer = setTimeout(displaySymbol, 500);
+}
+
+
 
 
 // Variable to set the replies
 var flag = 1;
 
 // Main Message
-var prevMsg = "Hi there ! My name is BotSter. <br> We can have a fun talk, or<br>You can ask me about Holy Book Bible<br>1. Ask me the names of all the Holy Bible books.<br>2. Get the verse of any chapter from any of the Holy bible Book.<br>3. I can show you any chapter of any of the Holy Bible book.<br>4. Get the list of verses from any chapter of any of the Holy bible Book. ";
+var prevMsg = "Hi there ! My name is BotSter. <br> We can have a fun talk, or You can ask me about Holy Book Bible<br>1. Ask me the names of all the Holy Bible books.<br>2. Get the verse of any chapter from any of the Holy bible Book.<br>3. I can show you any chapter of any of the Holy Bible book.<br>4. Get the list of verses from any chapter of any of the Holy bible Book. ";
+
 
 // Calling the initial loading function
 onloading();
@@ -214,45 +210,48 @@ onloading();
 // Initial Function when Website loads
 function onloading(){
 
-    var tempMsgBoxIn = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >'+prevMsg+'</div>';
-    document.getElementById('msgBox').innerHTML = tempMsgBoxIn;
+    var tempMsgBoxIn = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left">'+prevMsg+'</div>';
+    document.getElementById('chatBox').innerHTML = tempMsgBoxIn;
 
 }
+
+
 
 // To ask the Book Name From the User
 function askBookName(){
 
-    document.getElementById('msgBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Type the book name </div>';
+    document.getElementById('chatBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" align="left" >Type the book name </div>';
 
 }
 
 // To ask the chapter number
 function askChapterNo(){
 
-    document.getElementById('msgBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Type the Chapter Number</div>';
+    document.getElementById('chatBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" align="left" >Type the Chapter Number</div>';
 
 }
 
 // To ask the verse number
 function askVerseNo(){
 
-    document.getElementById('msgBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Type the Verse No </div>';
+    document.getElementById('chatBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Type the Verse No </div>';
 
 }
 
 // To ask the starting range of verse
 function askVerseFrom(){
 
-    document.getElementById('msgBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Type from which verse do you want </div>';
+    document.getElementById('chatBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft"  align="left">Type from which verse do you want </div>';
 
 }
 
 // To ask the end  range of verse
 function askVerseTo(){
 
-    document.getElementById('msgBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >Type till which verse do you want </div>';
+    document.getElementById('chatBox').innerHTML += '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" align="left" >Type till which verse do you want </div>';
 
 }
+
 
 // Default variables set
 var bookNameVar = "Luke";
@@ -264,20 +263,24 @@ var verseNoVar = 1;
 // Function to automatically scroll to the bottom when new message pops up
 function autoScroller(){
     
-    var scroll = document.getElementById('msgBox');
+    var scroll = document.getElementById('chatBox');
     scroll.scrollTop = scroll.scrollHeight;
     scroll.animate({scrollTop: scroll.scrollHeight});
 
 }
 
+
+
 // Default message to display
 function defaultMsgDisplay(){
 
     var defaultMsg = 'Anything you wanna know about Holy Book Bible?';
-    var template = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" >'+defaultMsg+'</div>';
-    document.getElementById('msgBox').innerHTML += template;
+    var template = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png"  id="imgLeft" align="left" align="left" >'+defaultMsg+'</div>';
+    document.getElementById('chatBox').innerHTML += template;
     autoScroller();
 }
+
+
 
 // Function to set the reply
 function getReply(text){
@@ -322,23 +325,23 @@ function getReply(text){
         // If user greets
         else if(text.includes('hi') || text.includes('hello') || text.includes('hey') || text.includes('hola')){
 
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Hello, Nice to meet you !</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Hello, Nice to meet you !</div>';
+            document.getElementById('chatBox').innerHTML += rep;
 
         }
         
         // Normal conversation
         else if(text.includes('how are you') || text.includes('how do you do')){
             
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Hello, I am Fine ! Thanks for asking. I hope you are fine too !</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Hello, I am Fine ! Thanks for asking. I hope you are fine too !</div>';
+            document.getElementById('chatBox').innerHTML += rep;
 
         }
         
         else if(text.includes('what you can do') || text.includes('what you do')){
             
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >'+prevMsg+'</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left" >'+prevMsg+'</div>';
+            document.getElementById('chatBox').innerHTML += rep;
             defaultMsgDisplay();
 
         }
@@ -346,39 +349,39 @@ function getReply(text){
         // If user says praises
         else if(text.includes('you are nice') || text.includes('good') || text.includes('nice') || text.includes('awesome')){
 
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Thankyou! it means a lot!</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Thankyou! it means a lot!</div>';
+            document.getElementById('chatBox').innerHTML += rep;
 
         }
         
         // If user says no to anything
         else if(text.includes('no') || text.includes('nah') || text.includes('nope')){
 
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >OK.....</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left" >OK.....</div>';
+            document.getElementById('chatBox').innerHTML += rep;
         
         }
 
         // If user says by or end the conversation
         else if(text.includes('bye') || text.includes('see you') || text.includes('tata')){
 
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Bye Bye<br>Hope to see you again soon!</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Bye Bye<br>Hope to see you again soon!</div>';
+            document.getElementById('chatBox').innerHTML += rep;
 
         }
         
         else if(text.includes('yes') || text.includes('yeah')){
 
-            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Ok...np</div>';
-            document.getElementById('msgBox').innerHTML += rep;
+            var rep = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"   align="left">Ok...np</div>';
+            document.getElementById('chatBox').innerHTML += rep;
 
         }
 
         // If user types un understandable message
         else{
 
-            var errReply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  >Did not get you! Ask Again ...</div>';
-            document.getElementById('msgBox').innerHTML += errReply;
+            var errReply = '<div id="card1" class="cards cardleft"><img src="https://support.upwork.com/hc/article_attachments/360040474034/chatbot-data.png" id="imgLeft"  align="left" >Did not get you! Ask Again ...</div>';
+            document.getElementById('chatBox').innerHTML += errReply;
 
         }
     }
@@ -476,33 +479,41 @@ function getReply(text){
     }    
 }
 
-// Function is called when send button is clicked
-function adder(){
-    
-    // Showing typing for some time after user sends a message
-    document.getElementById('typing').innerHTML = 'Typing...';
-    var val = document.getElementById('inputBoxID').value;
-    
-    if(val!=""){
-
-        var tsg = '<div id="card1" class="cards cardright">'+val+'<img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" id="imgRight"></div>';
-
-        document.getElementById('msgBox').innerHTML += tsg;
-        autoScroller();
-
-        val = val.toLowerCase();
-        var call = setTimeout(getReply,2500,val);
-        var rem = setTimeout(removal,2000);
-        
-        document.getElementById('inputBoxID').value = "";
-        var sc = setTimeout(autoScroller,2700);
-
-    }
-}
-
 // Function to remove typing message
 function removal(){
 
     document.getElementById('typing').innerHTML = "";
     
 }
+
+
+
+// Function is called when send button is clicked
+function adder(){
+    // alert("in adder");
+    // Showing typing for some time after user sends a message
+    
+    var val = document.getElementById('inputBox').value;
+    if(val!=""){
+    // alert(val);
+    
+    document.getElementById('typing').innerHTML = 'Typing...';
+   
+
+        var tsg = '<div id="card1" class="cards cardright"><div id="cardFlex">'+val+'<img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" id="imgRight" align="right"></div></div>';
+
+        document.getElementById('chatBox').innerHTML += tsg;
+        autoScroller();
+
+        val = val.toLowerCase();
+        var call = setTimeout(getReply,2500,val);
+        var rem = setTimeout(removal,2000);
+        
+        document.getElementById('inputBox').value = "";
+        var sc = setTimeout(autoScroller,2700);
+
+    }
+}
+
+
+
